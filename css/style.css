@@ -276,6 +276,11 @@ body {
     color: rgb(0, 0, 0);
     font-weight: 600;
     background: rgb(255, 200, 3);
+    cursor: pointer;
+}
+.head-button button:hover{
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.19);
+    background: rgb(225, 177, 2);
 }
 
 .converter-head {
