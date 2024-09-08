@@ -234,18 +234,26 @@ body {
 
 
 .sp-head {
-    padding: 11px 9px;
-    color: black;
-    background: #b7b7b7;
-    display: block;
-    margin: 67px 0;
-    text-align: center;
+    padding: 11px 9px; /* Maintains the padding around the text */
+    color: black; /* Text color */
+    background-color: #b7b7b7; /* Background color */
+    display: block; /* Ensures the span takes the full width available */
+    margin: 60px auto; /* Centers the block horizontally and adjusts top/bottom margin */
+    text-align: center; /* Centers the text within the block */
+    /* border-radius: 5px; Adds slight rounding to corners for a smoother look */
+    font-family: Jost, sans-serif; /* Consistent font style */
+    font-size: 1rem; /* Sets a readable font size */
+    /* max-width: 300px; Limits the maximum width for better aesthetics on large screens */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Adds a subtle shadow for depth */
 }
 
-.Con1 {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 15px;
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .sp-head {
+        margin: 60px auto; /* Adjusts margins for smaller screens */
+        font-size: 0.9rem; /* Reduces font size slightly for better fit */
+        padding: 10px 8px; /* Adjusts padding to match smaller font size */
+    }
 }
 
 .Con1 h1 {
