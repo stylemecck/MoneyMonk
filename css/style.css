@@ -426,7 +426,7 @@ body {
 .container1 span {
     color: deeppink;
 }
-
+/* question section */
 .faqs {
     max-width: 1200px;
     margin: auto;
@@ -520,10 +520,7 @@ body {
     overflow: hidden;
 }
 
-.left-faqs-con {
-    width: 50%;
-}
-
+.left-faqs-con,
 .right-faqs-con {
     width: 50%;
 }
@@ -532,6 +529,41 @@ body {
     padding: 10px;
 }
 
+/* Responsive CSS for Mobile View */
+@media (max-width: 768px) {
+    .left-faqs-con,
+    .right-faqs-con {
+        width: 100%;
+    }
+    
+    .fa-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .left-head-faqs,
+    .right-head-faqs-image {
+        max-width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .right-head-faqs-image img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .faqs-content2 {
+        flex-direction: column;
+    }
+
+    .capsul {
+        padding: 5px;
+    }
+}
+
+
+/* footer section */
 .footer {
     padding: 1px;
     background: radial-gradient(#ffc803, transparent);
