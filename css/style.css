@@ -565,13 +565,36 @@ body {
 
 /* footer section */
 .footer {
-    padding: 1px;
-    background: radial-gradient(#ffc803, transparent);
+    background-color: #f9f9f9; /* Light grey background for the footer */
+    padding: 20px; /* Padding around the footer content */
+    text-align: center; /* Center align the text */
+    font-family: Jost, sans-serif; /* Consistent font family */
+    color: #333; /* Dark grey text color */
+    border-top: 1px solid #ddd; /* Subtle border on top for separation */
+    margin-top: 20px; /* Space above the footer */
 }
 
 .cp-text {
-    color: rgba(0, 0, 0, .7);
-    font-size: 1.25rem;
-    text-shadow: 0 1px rgba(255, 255, 255, 0.1);
-    text-align: center;
+    font-size: 0.9rem; /* Slightly smaller text size */
+    margin: 0; /* Remove default margin */
+}
+
+.footer a {
+    color: inherit; /* Use same color as the surrounding text */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover for clarity */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .cp-text {
+        font-size: 0.8rem; /* Reduce font size slightly on smaller screens */
+    }
 }
