@@ -276,11 +276,6 @@ body {
     color: rgb(0, 0, 0);
     font-weight: 600;
     background: rgb(255, 200, 3);
-    cursor: pointer;
-}
-.head-button button:hover{
-    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.19);
-    background: rgb(225, 177, 2);
 }
 
 .converter-head {
@@ -309,6 +304,7 @@ body {
     border-radius: 10px;
     box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.19);
     margin: 0 auto;
+    max-width: 100%;
 }
 
 .inputtxt,
@@ -316,8 +312,8 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 200px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 200px;
     margin: 10px 0;
 }
 
@@ -326,8 +322,6 @@ body {
     color: black;
     background-color: rgb(255, 255, 255);
     font-size: 1.25rem;
-    width: 200px;
-    max-width: 100%;
 }
 
 .button1 {
@@ -359,7 +353,7 @@ body {
     justify-content: center;
     padding: 20px;
     align-items: center;
-    /* max-width: 1200px; */
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -368,8 +362,9 @@ body {
     text-align: center;
     background-color: #fff;
     padding: 30px;
-    width: 290px;
-    height: 290px;
+    width: 90%;
+    max-width: 290px;
+    height: auto; /* Remove fixed height for flexible sizing */
     border-radius: 20px;
     margin: 10px;
     transition: 0.3s;
@@ -379,6 +374,34 @@ body {
 .card:hover {
     background: rgb(255, 200, 3);
 }
+
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .converter-head {
+        height: auto; /* Adjust height for smaller screens */
+        margin-top: 30px;
+    }
+
+    .converter-form {
+        padding: 20px 10px;
+        font-size: 1rem; /* Adjust font size for better readability */
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%; /* Full width for smaller screens */
+        margin: 5px;
+        padding: 20px;
+    }
+
+    .button1 {
+        width: 100%; /* Full width button */
+    }
+}
+
 
 .testi {
     padding: 5px 0;
