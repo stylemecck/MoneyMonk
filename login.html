@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="android-chrome-512x512.png" type="image/x-icon">
+    <link rel="shortcut icon" href="android-chrome-512x512.png" type="image/x-icon">
+    <meta charset="utf-8" />
+    <title>About - Money Monk</title>
+    <meta name="description"
+        content="Money Monk offers fast, secure, and affordable money transfer services worldwide. No KYC required for wallet transactions.">
+    <meta name="keywords" content="money transfer, currency exchange, secure transactions, international transfers">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/about.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive -->
+    <script src="./toggle.js"></script>
+    <style>
+        .loginBody {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .login-form {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-form h1 {
+            margin-bottom: 1.5rem;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .login-form .input-field {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 11px auto;
+        }
+
+        .btn-login:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-signup {
+            display: inline-block;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #28a745;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn-signup:hover {
+            background-color: #218838;
+        }
+
+        .message {
+            margin-top: 1rem;
+            font-size: 14px;
+        }
+
+        .message.success {
+            color: #28a745;
+        }
+
+        .message.error {
+            color: #dc3545;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header class="sticky">
+            <nav class="navbar">
+                <div class="Logo">
+                    <!-- Text-based logo on mobile -->
+                    <img src="https://img.freepik.com/free-vector/money-logo-design-vector_474888-2076.jpg"
+                        alt="Logo" />
+                    <span class="menu-toggle">&#9776;</span> <!-- Hamburger icon for mobile -->
+                </div>
+                <div class="menu1">
+                    <div class="menu_mid">
+                        <ul class="ul-menu">
+                            <li><a href="index.html">Home </a></li>
+                            <li><a href="index.html#service">Service </a></li>
+                            <li><a href="./about.html">About </a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="index.html#cur">Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div class="menuRight">
+                        <ul>
+                            <li><a href="login.aspx">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Mobile menu -->
+                <div class="mobile-menu">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#service">Service</a>
+                    <a href="./about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="currency-converter.html">Currency Converter</a>
+                    <a href="login.aspx">Login</a>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="loginBody">
+        <div class="login-container">
+            <div class="login-form">
+                <h1>Login</h1>
+
+                <label for="txtUsername">Username</label>
+                <input type="text" id="txtUsername" class="input-field" />
+
+                <label for="txtPassword">Password</label>
+                <input type="password" id="txtPassword" class="input-field" />
+
+                <button class="btn-login" onclick="handleLogin(event)">Login</button>
+
+                <div id="lblMessage" class="message"></div>
+
+                <div class="signup-link">
+                    <a href="signup.html" class="btn-signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="footer">
+        <p class="cp-text">
+            © Copyright 2024 Money Monk. All rights reserved. | Made ❤️ By Satyam Singh
+        </p>
+    </section>
+</body>
+
+</html>
