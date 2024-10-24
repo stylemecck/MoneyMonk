@@ -13,25 +13,17 @@
     <link rel="stylesheet" type="text/css" href="css/about.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive -->
     <script src="./toggle.js"></script>
+    <script src="./signup.js"></script>
     <style>
-        .loginBody {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        .signup-container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            background-color: #f4f4f4;
         }
 
-        .login-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-
-        .login-form {
+        .signup-form {
             background: #fff;
             padding: 2rem;
             border-radius: 8px;
@@ -41,13 +33,13 @@
             text-align: center;
         }
 
-        .login-form h1 {
+        .signup-form h1 {
             margin-bottom: 1.5rem;
             font-size: 24px;
             color: #333;
         }
 
-        .login-form .input-field {
+        .signup-form .input-field {
             width: 100%;
             padding: 0.75rem;
             margin-bottom: 1rem;
@@ -56,7 +48,7 @@
             box-sizing: border-box;
         }
 
-        .btn-login {
+        .btn-signup {
             width: 100%;
             padding: 0.75rem;
             background-color: #007bff;
@@ -65,14 +57,13 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
-            margin: 11px auto;
         }
 
-        .btn-login:hover {
+        .btn-signup:hover {
             background-color: #0056b3;
         }
 
-        .btn-signup {
+        .btn-login {
             display: inline-block;
             width: 100%;
             padding: 0.75rem;
@@ -84,9 +75,10 @@
             font-size: 16px;
             text-align: center;
             text-decoration: none;
+            margin: 11px auto;
         }
 
-        .btn-signup:hover {
+        .btn-login:hover {
             background-color: #218838;
         }
 
@@ -145,28 +137,28 @@
         </header>
     </div>
 
-    <div class="loginBody">
-        <div class="login-container">
-            <div class="login-form">
-                <h1>Login</h1>
+    <div class="signup-container">
+        <div class="signup-form">
+            <h1>Sign Up</h1>
 
-                <label for="txtUsername">Username</label>
-                <input type="text" id="txtUsername" class="input-field" />
+            <label for="txtUsername">Username</label>
+            <input type="text" id="txtUsername" class="input-field" />
 
-                <label for="txtPassword">Password</label>
-                <input type="password" id="txtPassword" class="input-field" />
+            <label for="txtPassword">Password</label>
+            <input type="password" id="txtPassword" class="input-field" />
 
-                <button class="btn-login" onclick="handleLogin(event)">Login</button>
+            <label for="txtConfirmPassword">Confirm Password</label>
+            <input type="password" id="txtConfirmPassword" class="input-field" />
 
-                <div id="lblMessage" class="message"></div>
+            <button class="btn-signup" onclick="handleSignUp(event)">Sign Up</button>
 
-                <div class="signup-link">
-                    <a href="signup.html" class="btn-signup">Sign Up</a>
-                </div>
+            <div id="lblMessage" class="message"></div>
+
+            <div class="login-link">
+                <a href="login.html" class="btn-login">Already have an account? Login</a>
             </div>
         </div>
     </div>
-
     <section class="footer">
         <p class="cp-text">
             © Copyright 2024 Money Monk. All rights reserved. | Made ❤️ By Satyam Singh
