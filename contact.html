@@ -1,19 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Money Monk</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
+
+    <style>
+        /* Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
     <div>
         <header class="sticky">
             <nav class="navbar">
                 <div class="Logo">
                     <!-- Text-based logo on mobile -->
-                    <img src="https://img.freepik.com/free-vector/money-logo-design-vector_474888-2076.jpg" alt="Logo" />
+                    <img src="https://img.freepik.com/free-vector/money-logo-design-vector_474888-2076.jpg"
+                        alt="Logo" />
                     <span class="menu-toggle">&#9776;</span> <!-- Hamburger icon for mobile -->
                 </div>
                 <div class="menu1">
@@ -44,7 +97,79 @@
             </nav>
         </header>
     </div>
-    <h1>Under the construction comming soon</h1>
+    <div class="contact-content">
+        <h1>CONTACT US</h1>
+    </div>
+
+    <div class="contact-container">
+        <form id="form1">
+            <div class="contact-form">
+                <div class="contact-form-left">
+                    <label class="error-message" id="LabelError" style="display:none;">Error Message</label>
+                    <label class="success-message" id="LabelSuccess" style="display:none;">Success Message</label>
+
+                    <label for="name" class="lable-con">Name</label>
+                    <input type="text" id="name" class="input-con" />
+
+                    <label for="email" class="lable-con">Email</label>
+                    <input type="email" id="email" class="input-con" />
+
+                    <label for="phone" class="lable-con">Phone</label>
+                    <input type="number" id="phone" class="input-con" />
+
+                    <label for="service" class="lable-con">Service</label>
+                    <input type="text" id="service" class="input-con" />
+
+                    <label for="message" class="lable-con">Message</label>
+                    <textarea id="message" class="input-con" rows="5"></textarea>
+
+                    <button type="button" class="button" onclick="openPreview()">Preview</button>
+                    <button type="submit" class="button">Submit</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- The Modal -->
+        <div id="previewModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closePreview()">&times;</span>
+                <h2>Preview Your Submission</h2>
+                <div class="preview-item"><b>Name:</b> <span id="previewName"></span></div>
+                <div class="preview-item"><b>Email:</b> <span id="previewEmail"></span></div>
+                <div class="preview-item"><b>Phone:</b> <span id="previewPhone"></span></div>
+                <div class="preview-item"><b>Service:</b> <span id="previewService"></span></div>
+                <div class="preview-item"><b>Message:</b> <span id="previewMessage"></span></div>
+            </div>
+        </div>
+
+        <div class="content-form-right">
+            <div>
+                <p class="letterSpace">CONTENT DETAILS</p>
+                <p>support@moneymonk.com</p>
+                <p>+91 999,999,9999</p>
+                <div>
+                    <p><b>Westfield</b></p>
+                    <p>233 North Avenue E.</p>
+                    <p>Westfield, NJ 07090</p>
+                </div>
+                <div>
+                    <p><b>Short Hills Office</b></p>
+                    <p>549 Millburn Ave.</p>
+                    <p>Short Hills, NJ 07078</p>
+                </div>
+                <div>
+                    <p><b>Ridgewood</b></p>
+                    <p>2-4 Garber Sq,</p>
+                    <p>Ridgewood, NJ 07450</p>
+                </div>
+                <div>
+                    <p><b>Red Bank</b></p>
+                    <p>301 Maple Ave.,</p>
+                    <p>Red Bank NJ 07701</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="footer">
         <p class="cp-text">
             © Copyright 2024 Money Monk. All rights reserved. | Made ❤️ By Satyam Singh
@@ -83,6 +208,9 @@
         });
     </script>
 
-   
+
+
+    <script src="./contact.js"></script>
 </body>
+
 </html>
